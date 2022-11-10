@@ -1,0 +1,11 @@
+<div class="container mt-3 text-center">
+  <h1>Watchlist</h1>
+  <div class="cards mt-3">
+    <% @lists.each do |list|  %>
+      <%= link_to list_path(list), class:"text-decoration-none" do %>
+        <%= render 'list_card', list: list %>
+      <% end %>
+    <% end %>
+  </div>
+  <%= link_to 'Create New Movie Collection', new_list_path, class:'btn btn-info btn-lg mt-5' %>
+</div>
