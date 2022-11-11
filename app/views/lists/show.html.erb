@@ -1,11 +1,11 @@
 <div class="container mt-3">
   <h1><%= @list.name %> Movies</h1>
 
-  <% if @list.movies.any? %>
+  <% if @list.bookmarks.any? %>
     <div class="cards mt-3">
-      <% @list.movies.each do |movie| %>
+      <% @list.bookmarks.each do |bookmark| %>
         <div>
-          <%= render 'movie_card', movie: movie %>
+          <%= render 'movie_card', movie: bookmark.movie, bookmark: bookmark %>
         </div>
       <% end %>
     </div>

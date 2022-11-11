@@ -1,6 +1,7 @@
 require 'open-uri'
 
 puts 'Cleaning out Movie DB...'
+Bookmark.destroy_all
 Movie.destroy_all
 # List.destroy_all
 
